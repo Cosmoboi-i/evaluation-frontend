@@ -17,7 +17,7 @@ export default function Filter(props) {
   };
 
   return (
-    <div>
+    <div className="filter">
       <div className="filter-top">
         <div className="filter-heading">
           <i className="fa-solid fa-filter filter-child fa-2x"></i>

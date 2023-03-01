@@ -1,14 +1,19 @@
 import React, { useEffect } from "react";
 import "./card.css";
 import Proptypes from "prop-types";
+import { useNavigate } from "react-router-dom";
 
+const navigate = useNavigate();
 export default function Card(props) {
   useEffect(() => {
     console.log("props", props);
   });
   return (
     <div className="card">
-      <img src={props.imgUrl}></img>
+      <img
+        src={props.imgUrl}
+        onClick={() => navigate(`/event/${props.id}`)}
+      ></img>
       <div className="card-content">
         <div className="card-heading">{props.name}</div>
         <div className="card-content">

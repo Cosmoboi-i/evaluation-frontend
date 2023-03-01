@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // add this in constants ////
 import { ERROR_ROUTE, HOME_ROUTE } from "./constants/paths";
 import { Home, Error, PageNotFound, Card } from "./Pages";
+import Footer from "./components/footer";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path={"*"} element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
+      <Footer />
     </>
   );
 }

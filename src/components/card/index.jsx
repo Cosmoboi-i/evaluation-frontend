@@ -1,31 +1,66 @@
 import React from "react";
 import "./card.css";
+import Proptypes from "prop-types";
 
-export default function Card() {
+export default function Card(props) {
   return (
     <div className="card">
-      <img src="https://i.ibb.co/3zbdvWX/battle-of-bands.jpg"></img>
+      <img src={props.imgUrl}></img>
       <div className="card-content">
-        <div className="card-heading">BATTLE OF THE BANDS</div>
+        <div className="card-heading">{props.name}</div>
         <div className="card-content">
-          <div className="card-desc">
-            Get ready for Battle of the Bands, where the hottest up-and-coming
-            rock groups will compete for the ultimate prize. With heart-pumping
-            beats and electrifying performances
-          </div>
+          <div className="card-desc">{props.description}</div>
           <div>
-            <div className="venue">VENUE: All stars area, stuff ahead</div>
-            <div className="venue">VENUE: All stars area, stuff ahead</div>
+            <div className="venue">
+              <b>VENUE:</b> {props.venue}
+            </div>
+            <div className="venue">
+              <b>DATE:</b> {props.datetime}
+            </div>
           </div>
         </div>
         <div className="reactions">
           <div className="register">
-            <i className="fa-solid fa-circle-check fa-2x"></i>
-            <div className="registered">REGISTERED</div>
+            <i
+              className={`${
+                props.isRegistered ? "fa-solid" : "fa-regular"
+              } fa-circle-check fa-2x`}
+              onClick={() =>
+                props.updateEvent(props.id, {
+                  isRegistered: !props.isRegistered,
+                })
+              }
+            ></i>
+            <div className="registered">
+              {props.isRegistered ? "REGISTERED" : "REGISTER"}
+            </div>
           </div>
-          <i className="fa-regular fa-bookmark fa-2x bookmark"></i>
+          <i
+            className={`${
+              props.isBookmarked ? "fa-solid" : "fa-regular"
+            } fa-bookmark fa-2x bookmark`}
+            onClick={() =>
+              props.updateEvent(props.id, {
+                isBookmarked: !props.isBookmarked,
+              })
+            }
+          ></i>
         </div>
       </div>
     </div>
   );
 }
+
+Card.propTypes = {
+  id: Proptypes.number.isRequired,
+  name: Proptypes.string.isRequired,
+  description: Proptypes.string.isRequired,
+  venue: Proptypes.string.isRequired,
+  datetime: Proptypes.string.isRequired,
+  timezone: Proptypes.string.isRequired,
+  areSeatsAvailable: Proptypes.bool.isRequired,
+  isRegistered: Proptypes.bool.isRequired,
+  isBookmarked: Proptypes.bool.isRequired,
+  imgUrl: Proptypes.string.isRequired,
+  updateEvent: Proptypes.func.isRequired,
+};

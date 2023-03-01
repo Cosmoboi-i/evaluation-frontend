@@ -1,0 +1,13 @@
+.filter {
+  height: 10vh;
+}
+
+.filter-child {
+  padding: 0.5rem;
+}
+
+.filter-heading {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+}

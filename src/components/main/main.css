@@ -13,3 +13,8 @@
   gap: 1.5rem 0px;
   margin-top: 153px;
 }
+
+.main-padding {
+  padding: 2rem 0;
+  box-sizing: border-box;
+}

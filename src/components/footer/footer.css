@@ -4,14 +4,35 @@
 
   background: black;
   color: white;
+  display: flex;
+  justify-content: center;
 }
 
 .theme {
-  padding-left: 1rem;
+  padding: 0 1rem;
   font-size: 1.1rem;
   font-weight: 500;
+  justify-self: flex-start;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: row;
+}
+
+.theme-text {
+  padding: 0 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  justify-self: flex-start;
+  align-self: center;
+  display: flex;
+  flex-direction: row;
 }
 
 .blob {
+  height: 2rem;
+  width: 2rem;
+
+  border-radius: 0.5rem;
   
+  margin: 0 0.4rem;
 }

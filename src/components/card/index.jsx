@@ -3,8 +3,8 @@ import "./card.css";
 import Proptypes from "prop-types";
 import { useNavigate } from "react-router-dom";
 
-const navigate = useNavigate();
 export default function Card(props) {
+  const navigate = useNavigate();
   useEffect(() => {
     console.log("props", props);
   });
@@ -15,8 +15,16 @@ export default function Card(props) {
         onClick={() => navigate(`/event/${props.id}`)}
       ></img>
       <div className="card-content">
-        <div className="card-heading">{props.name}</div>
-        <div className="card-content">
+        <div
+          className="card-heading"
+          onClick={() => navigate(`/event/${props.id}`)}
+        >
+          {props.name}
+        </div>
+        <div
+          className="card-content"
+          onClick={() => navigate(`/event/${props.id}`)}
+        >
           <div className="card-desc">{props.description}</div>
           <div>
             <div className="venue">

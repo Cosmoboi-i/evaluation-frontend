@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DetailedCard should render properly 1`] = `
+<DocumentFragment>
+  <div
+    class="detail-card"
+  >
+    <img />
+    <div
+      class="card-content"
+    >
+      <div
+        class="card-heading"
+      />
+      <div
+        class="card-content"
+      >
+        <div
+          class="card-desc"
+        />
+        <div>
+          <div
+            class="venue"
+          >
+            <b>
+              VENUE:
+            </b>
+             
+          </div>
+          <div
+            class="venue"
+          >
+            <b>
+              DATE:
+            </b>
+             
+          </div>
+        </div>
+      </div>
+      <div
+        class="reactions"
+      >
+        <div
+          class="register no-seats"
+        >
+          <i
+            class="fa-solid fa-circle-xmark fa-2x"
+          />
+          <div
+            class="registered"
+          >
+            NO SEATS AVAILABLE
+          </div>
+        </div>
+        <i
+          class="fa-regular fa-bookmark fa-2x bookmark"
+        />
+      </div>
+      <div
+        class="register-button"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

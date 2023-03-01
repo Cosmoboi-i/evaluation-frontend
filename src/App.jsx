@@ -6,10 +6,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ERROR_ROUTE, HOME_ROUTE } from "./constants/paths";
 import { Home, Error, PageNotFound, Card } from "./Pages";
 import Footer from "./components/footer";
+import { ThemeProvider } from "./contexts/theme";
 
 function App() {
   return (
-    <>
+    <ThemeProvider>
       <Header />
       <BrowserRouter>
         <Routes>
@@ -20,7 +21,7 @@ function App() {
         </Routes>
       </BrowserRouter>
       <Footer />
-    </>
+    </ThemeProvider>
   );
 }
 

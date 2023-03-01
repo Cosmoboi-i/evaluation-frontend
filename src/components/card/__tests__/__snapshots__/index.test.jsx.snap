@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should render properly 1`] = `
+<DocumentFragment>
+  <div
+    class="card"
+  >
+    <img
+      src="ad"
+    />
+    <div
+      class="card-content"
+    >
+      <div
+        class="card-heading"
+      >
+        abc
+      </div>
+      <div
+        class="card-content"
+      >
+        <div
+          class="card-desc"
+        >
+          abc
+        </div>
+        <div>
+          <div
+            class="venue"
+          >
+            <b>
+              VENUE:
+            </b>
+             abc
+          </div>
+          <div
+            class="venue"
+          >
+            <b>
+              DATE:
+            </b>
+             abc
+          </div>
+        </div>
+      </div>
+      <div
+        class="reactions"
+      >
+        <div
+          class="register no-seats"
+        >
+          <i
+            class="fa-solid fa-circle-xmark fa-2x"
+          />
+          <div
+            class="registered"
+          >
+            NO SEATS AVAILABLE
+          </div>
+        </div>
+        <i
+          class="fa-regular fa-bookmark fa-2x bookmark"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,15 @@
+.main {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 91.5vh;
+}
+
+.cardpane {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+  gap: 1.5rem 0px;
+  margin-top: 153px;
+}

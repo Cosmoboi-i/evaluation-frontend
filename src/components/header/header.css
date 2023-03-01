@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  color: white;
+  height: 8.5vh;
+
+}
+
+.heading {
+  font-family: 'Big shoulders inline display';
+  font-size: 3.2rem;
+  align-self: center;
+}

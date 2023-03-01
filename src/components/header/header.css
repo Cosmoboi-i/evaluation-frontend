@@ -11,5 +11,6 @@
 .heading {
   font-family: 'Big shoulders inline display';
   font-size: 3.2rem;
-  align-self: center;
+  align-self: flex-start;
+  justify-self: center;
 }

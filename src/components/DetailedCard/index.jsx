@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
-import "./card.css";
+import "./detailedCard.css";
 import Proptypes from "prop-types";
 
-export default function Card(props) {
+export default function DetailedCard(props) {
   useEffect(() => {
     console.log("props", props);
   });
   return (
-    <div className="card">
+    <div className="detail-card">
       <img src={props.imgUrl}></img>
       <div className="card-content">
         <div className="card-heading">{props.name}</div>
@@ -29,11 +29,6 @@ export default function Card(props) {
                 className={`${
                   props.isRegistered ? "fa-solid" : "fa-regular"
                 } fa-circle-check fa-2x`}
-                onClick={() =>
-                  props.updateEvent(props.id, {
-                    isRegistered: !props.isRegistered,
-                  })
-                }
               ></i>
               <div className="registered">
                 {props.isRegistered ? "REGISTERED" : "REGISTER"}
@@ -45,7 +40,6 @@ export default function Card(props) {
               <div className="registered">NO SEATS AVAILABLE</div>
             </div>
           )}
-
           <i
             className={`${
               props.isBookmarked ? "fa-solid" : "fa-regular"
@@ -57,12 +51,27 @@ export default function Card(props) {
             }
           ></i>
         </div>
+        <div className="register-button">
+          {props.areSeatsAvailable ? (
+            <button
+              onClick={() =>
+                props.updateEvent(props.id, {
+                  isRegistered: !props.isRegistered,
+                })
+              }
+            >
+              {props.isRegistered ? "UNREGISTER" : "REGISTER"}
+            </button>
+          ) : (
+            <></>
+          )}
+        </div>
       </div>
     </div>
   );
 }
 
-Card.propTypes = {
+DetailedCard.propTypes = {
   id: Proptypes.number.isRequired,
   name: Proptypes.string.isRequired,
   description: Proptypes.string.isRequired,

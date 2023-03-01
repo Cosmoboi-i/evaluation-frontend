@@ -1,13 +1,61 @@
 .filter {
   height: 10vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.filter-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .filter-child {
-  padding: 0.5rem;
+  padding: 0 0.5rem;
 }
 
 .filter-heading {
   display: flex;
   align-items: center;
+  align-self: flex-end;
   font-size: 1.1rem;
+}
+
+.searchbar {
+  display: flex;
+}
+
+.search {
+  height: 38px;
+  width: 250px;
+
+  border: 1px solid black;
+  border-radius: 10px;
+
+  align-self: flex-start;
+  justify-self: flex-start;
+}
+
+.search-icon {
+  align-self: center;
+}
+
+.dropdown {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
